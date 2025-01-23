@@ -1,0 +1,106 @@
+# Spotify Playlist Generator
+
+Spotify Playlist Generator is an engaging and user-friendly music application that allows users to explore, create, and manage music playlists while fostering collaboration and connection through shared musical experiences.
+
+## Table of Contents
+
+- [About the Project](#about-the-project)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
+
+## About the Project
+
+Spotify Playlist Generator proposes creating an engaging and user-friendly music application that allows users to explore, create, and manage music playlists while fostering collaboration and connection through shared musical experiences.
+
+This project aims to:
+- Provide an intuitive interface for users to create and customize playlists.
+- Integrate with the Spotify API to enable seamless music search and access.
+- Allow users to share playlists and collaborate with others in real-time.
+- Enhance the music discovery experience through personalized recommendations.
+
+### Built With
+
+List the major technologies & frameworks used in the project:
+
+- [React](https://reactjs.org/)
+- [Express](https://expressjs.com/)
+- [Sequelize](https://sequelize.org/)
+- [Bootstrap](https://getbootstrap.com/)
+
+## Getting Started
+
+Instructions for setting up the project locally.
+
+### Prerequisites
+
+List the software and tools needed to run the project:
+
+```bash
+npm install npm@latest -g
+```
+
+### Installation
+
+1. Clone the repo:
+   ```bash
+   git clone [git@github.com:jeddyo/spotify-playlist-generator.git]
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd your-repo-name
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+Explain how to use your project. Include screenshots, code snippets, or examples if possible.
+
+```bash
+npm start
+```
+
+## Features
+
+- User authentication
+- Spotify API integration
+- Playlist customization
+
+## Contributing
+
+If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add some YourFeature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+## Contact
+
+Monty Gracey - [Email](slappytrap@gmail.com)
+John Garcia - [Email](johngarcia.edward@gmail.com) 
+Bikram Singh - [Email](singhsubway@gmail.com) 
+Arman Abadian - [Email](abadianarman@gmail.com) 
+Amir J Tehrani - [Email](ahjt28@gmail.com) 
+
+Project Link: [https://github.com/jeddyo/spotify-playlist-generator](https://github.com/jeddyo/spotify-playlist-generator)
+
+## Acknowledgments
+
+Shout out to anyone whose code, ideas, or guidance helped with the project:
+- [Spotify API Documentation](https://developer.spotify.com/documentation/web-api/)
+- [OpenAI API Documentation](https://platform.openai.com/docs/)
