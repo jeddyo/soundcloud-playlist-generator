@@ -1,8 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const styles = {
     container: {
@@ -61,9 +61,26 @@ const Home = () => {
       marginTop: '50px',
       color: '#b3b3b3',
     },
-    footerLink: {
+    spotifyButton: { // Monty
+      backgroundColor: 'transparent',
+      border: 'none',
+      cursor: 'pointer',
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '8px',
+      padding: '8px 16px',
+      borderRadius: '20px',
+      transition: 'background-color 0.3s ease',
+    },
+    spotifyButtonHover: { // Monty
+      backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    },
+    spotifyLogo: { // Monty
+      width: '24px',
+      height: '24px',
+    },
+    spotifyText: { // Monty
       color: '#1db954',
-      textDecoration: 'none',
       fontWeight: 'bold',
     },
   };
@@ -76,6 +93,12 @@ const Home = () => {
 
   const handleGetStarted = () => {
     navigate('/playlist');
+  };
+
+  const handleSpotifyButtonHover = (e, isHover) => { // Monty
+    e.target.style.backgroundColor = isHover
+      ? styles.spotifyButtonHover.backgroundColor
+      : 'transparent';
   };
 
   return (
@@ -109,7 +132,6 @@ const Home = () => {
         </div>
       </div>
 
-      {}
       <button
         style={styles.cta}
         onMouseEnter={(e) => handleButtonHover(e, true)}
@@ -121,14 +143,19 @@ const Home = () => {
 
       <div style={styles.footer}>
         <p>Made by TEAM 5 (Monty, John, Bikram, Arman, Amir)</p>
-        <a
-          href="https://www.spotify.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={styles.footerLink}
+        <button // Monty
+          style={styles.spotifyButton}
+          onMouseEnter={(e) => handleSpotifyButtonHover(e, true)}
+          onMouseLeave={(e) => handleSpotifyButtonHover(e, false)}
+          onClick={() => window.open('https://www.spotify.com', '_blank')}
         >
-          Visit Spotify
-        </a>
+          <img // Monty
+            src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
+            alt="Spotify Logo"
+            style={styles.spotifyLogo}
+          />
+          <span style={styles.spotifyText}>Visit Spotify</span> 
+        </button>
       </div>
     </div>
   );
