@@ -1,18 +1,19 @@
 export default (sequelize, DataTypes) => {
-  const Playlist = sequelize.define('Playlist', {
-    name: {
+  const User = sequelize.define('User', {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    email: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      unique: true,
     },
-    userId: {
-      type: DataTypes.INTEGER,
+    password: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
   });
 
-  return Playlist;
+  return User;
 };
