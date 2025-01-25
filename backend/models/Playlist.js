@@ -1,18 +1,16 @@
-export default (sequelize, DataTypes) => {
-  const Playlist = sequelize.define('Playlist', {
+const PlaylistModel = (sequelize, DataTypes) => {
+  return sequelize.define('Playlist', {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true,
     },
-    userId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+  }, {
+    tableName: 'Playlists', 
   });
-
-  return Playlist;
 };
+
+export default PlaylistModel;

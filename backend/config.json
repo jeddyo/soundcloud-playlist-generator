@@ -1,0 +1,13 @@
+{
+    "development": {
+      "username": "spotify_user",
+      "password": "spotify_password",
+      "database": "spotify_playlist_generator",
+      "host": "localhost",
+      "dialect": "postgres",
+      "define": {
+        "schema": "public"
+      }
+    }
+  }
+  
