@@ -1,28 +1,85 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
-
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+.light-mode {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #FFFFFF, #F2F2F2, #FFE4E1, #E0F7FA, #FAF4C0);
+  background-size: 200% 200%;
+  animation: light-pastel-shift 40s ease infinite;
+  color: #000000;
+}
+.dark-mode {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1DB954, #191414, #121212, #1DB954
+);
+  background-size: 200% 200%;
+  animation: direction-change-animation 60s ease infinite;
+  color: #FFFFFF;
+}
+header {
+  position: relative;
+  z-index: 1;
+  background-color: #FFFFFF;
+  color: #000000;
+  width: 100%;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+@keyframes light-pastel-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes direction-change-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+  
+  /* Modal Form Styles */
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #1db954;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
 }
 
-.light-mode {
-    background-color: #ffffff; 
-    color: #000000; 
-  }
-  
-  .dark-mode {
-    background-color: #191414; /* monty */
-    color: #ffffff; 
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1db954;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-content p {
+  color: #b3b3b3;
+  cursor: pointer;
+  text-align: center;
+}
