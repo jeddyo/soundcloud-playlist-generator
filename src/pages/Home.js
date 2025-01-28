@@ -17,14 +17,14 @@ const Home = () => {
       fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
     },
     title: {
-      color: '#1db954',
+      color: 'white',
       fontSize: '3rem',
       fontWeight: 'bold',
       marginBottom: '20px',
       textTransform: 'uppercase',
     },
     description: {
-      color: '#b3b3b3',
+      color: '#eaeaea',
       fontSize: '1.2rem',
       lineHeight: '1.6',
       marginBottom: '30px',
@@ -52,16 +52,17 @@ const Home = () => {
       borderRadius: '50px',
       cursor: 'pointer',
       transition: 'background-color 0.3s ease',
+      marginTop: '30px', // Add margin to position the button
     },
     ctaHover: {
       backgroundColor: '#1ed760',
     },
     footer: {
       textAlign: 'center',
-      marginTop: '50px',
+      marginTop: '30px', // Adjust margin to position the footer
       color: '#b3b3b3',
     },
-    spotifyButton: { // Monty
+    spotifyButton: {
       backgroundColor: 'transparent',
       border: 'none',
       cursor: 'pointer',
@@ -72,14 +73,14 @@ const Home = () => {
       borderRadius: '20px',
       transition: 'background-color 0.3s ease',
     },
-    spotifyButtonHover: { // Monty
+    spotifyButtonHover: {
       backgroundColor: 'rgba(255, 255, 255, 0.1)',
     },
-    spotifyLogo: { // Monty
+    spotifyLogo: {
       width: '24px',
       height: '24px',
     },
-    spotifyText: { // Monty
+    spotifyText: {
       color: '#1db954',
       fontWeight: 'bold',
     },
@@ -91,14 +92,14 @@ const Home = () => {
       : styles.cta.backgroundColor;
   };
 
-  const handleGetStarted = () => {
-    navigate('/playlist');
-  };
-
-  const handleSpotifyButtonHover = (e, isHover) => { // Monty
+  const handleSpotifyButtonHover = (e, isHover) => {
     e.target.style.backgroundColor = isHover
       ? styles.spotifyButtonHover.backgroundColor
       : 'transparent';
+  };
+
+  const handleGetStarted = () => {
+    navigate('/playlist'); // Navigate to the playlist page
   };
 
   return (
@@ -106,8 +107,7 @@ const Home = () => {
       <h1 style={styles.title}>Spotify Playlist Generator</h1>
 
       <p style={styles.description}>
-        Discover playlists that match your mood, activity, or event with just a
-        few clicks. Turn your ideas into the perfect soundtrack!
+      Generate playlist based on the music you love.
       </p>
 
       <div style={styles.featuresSection}>
@@ -132,6 +132,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Get Started Button */}
       <button
         style={styles.cta}
         onMouseEnter={(e) => handleButtonHover(e, true)}
@@ -141,20 +142,21 @@ const Home = () => {
         Get Started
       </button>
 
+      {/* Footer Section */}
       <div style={styles.footer}>
-        <p>Made by TEAM 5 (Monty, John, Bikram, Arman, Amir)</p>
-        <button // Monty
+        
+        <button
           style={styles.spotifyButton}
           onMouseEnter={(e) => handleSpotifyButtonHover(e, true)}
           onMouseLeave={(e) => handleSpotifyButtonHover(e, false)}
           onClick={() => window.open('https://www.spotify.com', '_blank')}
         >
-          <img // Monty
+          <img
             src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
             alt="Spotify Logo"
             style={styles.spotifyLogo}
           />
-          <span style={styles.spotifyText}>Visit Spotify</span> 
+          <span style={styles.spotifyText}>Visit Spotify</span>
         </button>
       </div>
     </div>
