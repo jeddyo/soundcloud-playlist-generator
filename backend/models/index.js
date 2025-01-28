@@ -20,15 +20,6 @@ const Playlist = PlaylistModel(sequelize, Sequelize.DataTypes);
 Playlist.belongsTo(User, { foreignKey: 'userId' });
 User.hasMany(Playlist, { foreignKey: 'userId' });
 
-// Sync database
-sequelize
-  .sync({ force: true }) // Use { alter: true } for safer schema updates without dropping tables
-  .then(() => {
-    console.log("Database synced successfully!");
-  })
-  .catch((err) => {
-    console.error("Error syncing database:", err);
-  });
 
 // Export the initialized Sequelize instance and models
 export { sequelize, User, Playlist };
