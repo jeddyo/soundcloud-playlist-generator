@@ -17,14 +17,14 @@ const Home = () => {
       fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
     },
     title: {
-      color: '#1db954',
+      color: 'white',
       fontSize: '3rem',
       fontWeight: 'bold',
       marginBottom: '20px',
       textTransform: 'uppercase',
     },
     description: {
-      color: '#b3b3b3',
+      color: '#eaeaea',
       fontSize: '1.2rem',
       lineHeight: '1.6',
       marginBottom: '30px',
@@ -107,8 +107,7 @@ const Home = () => {
       <h1 style={styles.title}>Spotify Playlist Generator</h1>
 
       <p style={styles.description}>
-        Discover playlists that match your mood, activity, or event with just a
-        few clicks. Turn your ideas into the perfect soundtrack!
+      Generate playlist based on the music you love.
       </p>
 
       <div style={styles.featuresSection}>
@@ -145,7 +144,7 @@ const Home = () => {
 
       {/* Footer Section */}
       <div style={styles.footer}>
-        <p>Made by TEAM 5 (Monty, John, Bikram, Arman, Amir)</p>
+        
         <button
           style={styles.spotifyButton}
           onMouseEnter={(e) => handleSpotifyButtonHover(e, true)}

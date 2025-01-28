@@ -22,7 +22,7 @@ const Navbar = () => {
     },
     brand: {
       color: '#ffffff', // White text for better contrast
-      fontSize: '2rem',
+      fontSize: '1.5rem',
       fontWeight: 'bold',
       textDecoration: 'none',
       fontFamily: "'Poppins', sans-serif", // Modern font
