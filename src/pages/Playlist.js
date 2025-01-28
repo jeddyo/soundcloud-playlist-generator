@@ -231,7 +231,7 @@ const Playlist = () => {
         return null;
     }
   };
-https://picsum.photos/500
+
 
 
 return (
@@ -296,7 +296,7 @@ return (
                 cursor: 'pointer',
               }}
             >
-              :heavy_multiplication_x:
+              
             </button>
             <h2 style={{ marginBottom: '20px' }}>{questions[currentStep].label}</h2>
             {renderQuestion()}
